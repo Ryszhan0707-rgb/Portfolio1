@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio - Salkhaev Sanzhar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="logo">MyPortfolio</div>
+    <nav class="menu">
+        <a href="index.html">Басты бет</a>
+        <a href="blog.html">Блог</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <div class="hero-text">
+                <h1>Salkhaev Sanzhar</h1>
+                <p class="role">Web әзірлеуші</p>
+
+                <p class="desc">
+                    Сәлем! Мен HTML және CSS тілдерін үйреніп жүрмін.
+                    Бұл сайтта менің жұмыстарым мен дағдыларым көрсетілген.
+                    Сайт Flexbox технологиясымен жасалды.
+                </p>
+
+                <div class="actions">
+                    <a class="btn primary" href="blog.html">Блогымды оқу</a>
+                    <a class="btn outline" href="#contacts">Байланыс</a>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="myphoto.jpeg" alt="avatar">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+        <h2>Менің дағдыларым</h2>
+        <div class="skill-list">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">Flexbox</div>
+            <div class="skill">Git/GitHub</div>
+            <div class="skill">VS Code</div>
+            <div class="skill">UI Design</div>
+        </div>
+    </section>
+
+    <section class="march-plan card-style">
+    <h2>Наурыз айындағы сабақ жоспары</h2>
+    <table class="layout-table">
+        <tr>
+            <td class="cell calendar-cell">
+                <table class="calendar">
+                    <tr>
+                        <th>Дс</th><th>Сс</th><th>Ср</th><th>Бс</th><th>Жм</th><th>Сб</th><th>Жс</th>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                        <td><a href="#day8" class="special">8</a></td>
+                        <td><a href="#day9" class="special">9</a></td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>18</td><td>19</td><td>20</td>
+                        <td><a href="#day21" class="special">21</a></td>
+                        <td><a href="#day22" class="special">22</a></td>
+                        <td><a href="#day23" class="special">23</a></td>
+                    </tr>
+                    <tr>
+                        <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="cell info-cell">
+                <p>Күнді басып ақпаратты қараңыз.</p>
+                <div id="day8" class="info"><h3>8-наурыз</h3><p>Халықаралық әйелдер күні.</p></div>
+                <div id="day9" class="info"><h3>9-наурыз</h3><p>8-наурыз жексенбі болғандықтан 9 күні демалыс.</p></div>
+                <div id="day21" class="info"><h3>21-наурыз</h3><p>Наурыз мейрамы.</p></div>
+                <div id="day22" class="info"><h3>22-наурыз</h3><p>Наурыз мейрамы.</p></div>
+                <div id="day23" class="info"><h3>23-наурыз</h3><p>Наурыз мейрамы.</p></div>
+            </td>
+        </tr>
+    </table>
+</section>
+
+    <!-- JS -->
+    <section class="js-tasks card-style">
+        <h2>Интерактивті тапсырмалар (JS)</h2>
+
+        <div class="js-grid">
+
+            <div class="js-box">
+                <h3>Атыңызды енгізіңіз</h3>
+                <input type="text" id="nameInput" placeholder="Атыңыз">
+                <button onclick="sayHello()">Көрсету</button>
+            </div>
+
+            <div class="js-box">
+                <h3>Күн және түс</h3>
+                <input type="date" id="dateVal"><br><br>
+                <input type="color" id="colorVal"><br><br>
+                <button onclick="changeColorAndDate()">Көрсету</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacts" class="contacts">
+        <h2>Байланыс</h2>
+        <p>Email: sanzharajdarly@gmail.com</p>
+        <p>Telegram: @sanzhar909</p>
+        <p>phone:+7 708 187 3935</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026. Salkhaev Sanzhar</p>
+</footer>
+
+<script>
+function sayHello() {
+    let name = document.getElementById("nameInput").value;
+    alert("Сәлем, " + name);
+}
+
+function changeColorAndDate() {
+    let date = document.getElementById("dateVal").value;
+    let color = document.getElementById("colorVal").value;
+    alert("Күн: " + date + "\nТүс: " + color);
+    document.body.style.backgroundColor = color;
+}
+</script>
+
+</body>
+</html>
